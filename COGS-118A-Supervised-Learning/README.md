@@ -117,4 +117,4 @@ Different ways to implement:
     - sum of square root of absolute value of y_hat - y_i, outliers will be weighed less
     - sum of (y_hat - y_i) squared, objective function in a typical linear regression
 
-![Linear-Regression Equation] (COGS-118A-Supervised-Learning/LinearRegression.png)
+![Linear-Regression Equation](COGS-118A-Supervised-Learning/LinearRegression.png)
