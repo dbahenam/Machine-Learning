@@ -108,7 +108,13 @@ Next algorithms will focus on looking for boundaries
 - requires minimizing or maximizing some function (objective function)
 - objective functions:
 
+## Lecture 4:
+
 #### Linear Regression:
+
+- Assumes x,y are linearly related
+- Assumes points are scattered around line uniformly with some error
+- Goal is to find the line that minimizes the errors
 
 Different ways to implement:
 
@@ -117,4 +123,49 @@ Different ways to implement:
     - sum of square root of absolute value of y_hat - y_i, outliers will be weighed less
     - sum of (y_hat - y_i) squared, objective function in a typical linear regression
 
+Objective function / Cost function / Reward function:
+
+    - Difference of the points from the line.
+    - ![Objection-Function](ObjectiveFunction.png)
+
+Source: COGS 118A Summer 22 Session 1 Lecture, Professor Anjum Gupta.
 ![Linear-Regression Equation](LinearRegression.png)
+
+    - Objective function of the variable we want to find
+    - We need the variable values that minimize the objective function. Easiest way to find them is to take the derivative of objective function and set it to zero.
+
+Main Point:
+
+- Linear Regression Analysis is used to predict the value of a variable based on information gather from previous variables.
+- You will have a function to predict the value of the variable. The only thing you need to do is find the values of the variables beta_0 and beta_1 that minimize the sum of squares error. Least square method for linear regression.
+  ![Linear-Regression Overview](ObjectiveFunction.png)
+
+#### Perceptron Algorithm
+
+Perceptron is a fancy word for hyperplane. Hyperplane is a fancy word for boundary.
+AKA single layered NN, Seperating hyperplane.
+
+Objective Function:
+
+- Find the beta that makes this function minimum
+
+Perceptron only works for two classes (it is binary).
+![Hyperplane](Hyperplane.png)
+
+Equation for line and the loss function. We have to find betas that minimize loss function
+![PerceptronEquations](PerceptronEq.png)
+
+- So far this seems similar to linear regression, however minimizing this the way we minimized least squares of linear regression is not easy.
+
+#### Gradient Descent (Optimization Algorithm)
+
+- Convex functions always have one minimum.
+
+What is the gradient(derivative) at point (1,1)? You would take your function and get the derivative with respect to x and then y. Then for each partial derivative, plug in (1,1). Your gradient will be a vector of the two answers. [9,1] for example. This will tell you the direction your going.
+
+- To maximize, you would take your point (1,1) and add a factor alpha \* gradient and the opposite to minimize. You would repeat this process until gradient becomes zero.
+
+#### The Gradient Descent Algorithm for Perceptron
+
+- Perceptron does not find the maximum margin boundary but support vector does.
+- Support vector machines find non-linear boundaries
