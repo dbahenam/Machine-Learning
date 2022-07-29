@@ -169,3 +169,24 @@ What is the gradient(derivative) at point (1,1)? You would take your function an
 
 - Perceptron does not find the maximum margin boundary but support vector does.
 - Support vector machines find non-linear boundaries
+- (review)
+
+## Lecture 5
+
+## Lecture 6
+
+#### Logistic Regression
+
+- It is finding a relationship between bunch of input variables x and an output variable y
+- We'd like to model the probability of the event occuring
+- Y = 1 or 0, but we can conceptualize values in between as probabilities
+- E(y) can never fall below 0 or above 1
+- The model is not a linear function of the beta paramaters.
+- Type of NONLINEAR regression model
+- Error rates are not Normally distributed (no bell curve of errors around a line)
+
+![LogisticRegression](LogisticRegression.png)
+
+- We want to model the probability as a function of x such that the likelihood of the data that we observe is maximized.
+
+![Likelihood](Likelihood_LR.png)
